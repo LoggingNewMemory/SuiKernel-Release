@@ -1,5 +1,7 @@
-# Templates
-Templates
+# Release Page of SuiKernel
+
+だって僕は星だから~
+Stellar Stellar
 
 Support Me: <br />
 https://saweria.co/kanagawayamada (ID / PH) <br />
