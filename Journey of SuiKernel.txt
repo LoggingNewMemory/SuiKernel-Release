@@ -8,6 +8,7 @@ repo sync -j$(nproc --all)
 cd common
 git checkout suikernel-main
 
+# Switch to LTO Thin (Unless your device is strong enough to build with full LTO)
 - arch/arm64/configs/gki_defconfig
 CONFIG_LTO_CLANG_FULL=y replace CONFIG_LTO_CLANG_THIN=y
 
