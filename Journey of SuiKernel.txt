@@ -1,0 +1,12 @@
+If you managed to find and read this. I consider you as a kernel developer
+
+# Get & SYNC Source
+repo init -u https://android.googlesource.com/kernel/manifest -b android12-5.10
+repo sync -j$(nproc --all)
+
+- arch/arm64/configs/gki_defconfig
+CONFIG_LTO_CLANG_FULL=y replace CONFIG_LTO_CLANG_THIN=y
+
+# Fixes Touchscreen
+curl -s https://github.com/linastorvaldz/kernel_new/commit/9e3775ee1fa72ddc32a1ebd8633e4a4dbfdabc96.pat
+ch | git am
