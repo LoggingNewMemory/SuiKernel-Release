@@ -1,8 +1,8 @@
 If you managed to find and read this. I consider you as a kernel developer
 
 # Get & SYNC Source
-```repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10```
-```repo sync -c -j$(nproc --all)```
+repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10
+repo sync -c -j$(nproc --all)
 
 # Up to GitHub to SuiKernel-Main Branch (Note: Common is the Kernel Source, but leave the rest so you don't struggle when it comes to upstream)
 cd common
