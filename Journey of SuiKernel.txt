@@ -10,6 +10,9 @@ git checkout -b suikernel-experimental | suikernel-main
 git remote set-url origin https://github.com/LoggingNewMemory/SuiKernel-android12-5.10
 git remote -v (To Verify The Remote)
 git branch -m suikernel-experimental | suikernel-main
+
+git pull origin suikernel-experimental | suikernel-main (Just in case if you need to continue)
+
 git push -u origin suikernel-experimental | suikernel-main
 git checkout suikernel-experimental| suikernel-main
 
