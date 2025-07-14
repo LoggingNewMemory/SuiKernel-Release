@@ -13,8 +13,8 @@ git branch -m suikernel-experimental | suikernel-main
 
 git pull origin suikernel-experimental | suikernel-main (Just in case if you need to continue)
 
-git push -u origin suikernel-experimental | suikernel-main
 git checkout suikernel-experimental | suikernel-main
+git push -u origin suikernel-experimental | suikernel-main
 
 # Switch to LTO Thin (Unless your device is strong enough to build with full LTO)
 - arch/arm64/configs/gki_defconfig
