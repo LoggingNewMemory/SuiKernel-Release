@@ -14,6 +14,7 @@ git branch -m suikernel-experimental | suikernel-main
 git pull origin suikernel-experimental | suikernel-main (Just in case if you need to continue)
 
 git checkout suikernel-experimental | suikernel-main
+git add .
 git push -u origin suikernel-experimental | suikernel-main
 
 # Switch to LTO Thin (Unless your device is strong enough to build with full LTO)
