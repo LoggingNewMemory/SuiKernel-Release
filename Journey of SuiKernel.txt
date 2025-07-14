@@ -21,5 +21,4 @@ git checkout suikernel-experimental | suikernel-main
 CONFIG_LTO_CLANG_FULL=y replace CONFIG_LTO_CLANG_THIN=y
 
 # Fixes Touchscreen
-curl -s https://github.com/linastorvaldz/kernel_new/commit/9e3775ee1fa72ddc32a1ebd8633e4a4dbfdabc96.pat
-ch | git am
+curl -s https://github.com/linastorvaldz/kernel_new/commit/9e3775ee1fa72ddc32a1ebd8633e4a4dbfdabc96.patch | git am
