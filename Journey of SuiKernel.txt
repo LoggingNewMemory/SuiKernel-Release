@@ -6,7 +6,12 @@ repo sync -c -j$(nproc --all)
 
 # Up to GitHub to SuiKernel-Main Branch (Note: Common is the Kernel Source, but leave the rest so you don't struggle when it comes to upstream)
 cd common
-git checkout suikernel-main
+git checkout -b suikernel-experimental | suikernel-main
+git remote set-url origin https://github.com/LoggingNewMemory/SuiKernel-android12-5.10
+git remote -v (To Verify The Remote)
+git branch -m suikernel-experimental | suikernel-main
+git push -u origin suikernel-experimental | suikernel-main
+git checkout suikernel-experimental| suikernel-main
 
 # Switch to LTO Thin (Unless your device is strong enough to build with full LTO)
 - arch/arm64/configs/gki_defconfig
