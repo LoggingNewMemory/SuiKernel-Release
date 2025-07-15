@@ -42,7 +42,7 @@ Then add "CONFIG_CPU_FREQ_GOV_SCHEDHORIZON=y" at the end of arch/arm64/configs/g
 inside /net/ipv4/Kconfig
 
 config TCP_CONG_CUBIC
-modify from default y to default m
+modify from default y to default n
 
 config DEFAULT_TCP_CONG
 modify from default "cubic" to default "bbr"
