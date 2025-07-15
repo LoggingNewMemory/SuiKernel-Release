@@ -18,19 +18,27 @@ git add .
 git commit -m "Your Message"
 git push -u origin suikernel-experimental
 
+########################
 # Switch to LTO Thin (Unless your device is strong enough to build with full LTO)
+########################
 - arch/arm64/configs/gki_defconfig
 CONFIG_LTO_CLANG_FULL=y replace CONFIG_LTO_CLANG_THIN=y
 
+########################
 # Fixes Touchscreen
+########################
 curl -s https://github.com/linastorvaldz/kernel_new/commit/9e3775ee1fa72ddc32a1ebd8633e4a4dbfdabc96.patch | git am
 
+########################
 # Adding Schedhorizon
+########################
 Follow This
 https://github.com/bintang774/gki-android12-5.10/commit/01819fe12f14ef34e3d75f4d0edfcd723f8313da#diff-0cde65256909335643b2a29a3813834c19d22b2c83436f6891a14a50d3532748
 Then add "CONFIG_CPU_FREQ_GOV_SCHEDHORIZON=y" at the end of arch/arm64/configs/gki_defconfig
 
+########################
 # Using BBR (Default & Remove Cubic)
+########################
 inside /net/ipv4/Kconfig
 
 config TCP_CONG_CUBIC
@@ -38,3 +46,16 @@ modify from default y to default m
 
 config DEFAULT_TCP_CONG
 modify from default "cubic" to default "bbr"
+
+then add
+
+CONFIG_TCP_CONG_ADVANCED=y
+CONFIG_TCP_CONG_BBR=y
+CONFIG_NET_SCH_FQ=y
+CONFIG_TCP_CONG_BIC=n
+CONFIG_TCP_CONG_WESTWOOD=n
+CONFIG_TCP_CONG_HTCP=n
+CONFIG_DEFAULT_BBR=y
+CONFIG_DEFAULT_TCP_CONG="bbr"
+
+at the end of arch/arm64/configs/gki_defconfig
