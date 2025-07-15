@@ -29,3 +29,12 @@ curl -s https://github.com/linastorvaldz/kernel_new/commit/9e3775ee1fa72ddc32a1e
 Follow This
 https://github.com/bintang774/gki-android12-5.10/commit/01819fe12f14ef34e3d75f4d0edfcd723f8313da#diff-0cde65256909335643b2a29a3813834c19d22b2c83436f6891a14a50d3532748
 Then add "CONFIG_CPU_FREQ_GOV_SCHEDHORIZON=y" at the end of arch/arm64/configs/gki_defconfig
+
+# Using BBR (Default & Remove Cubic)
+inside /net/ipv4/Kconfig
+
+config TCP_CONG_CUBIC
+modify from default y to default m
+
+config DEFAULT_TCP_CONG
+modify from default "cubic" to default "bbr"
