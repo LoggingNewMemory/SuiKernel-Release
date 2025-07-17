@@ -1,7 +1,5 @@
 If you managed to find and read this. I consider you as a kernel developer
-
-# Using Self Hosted Runners
-https://github.com/KanagawaAltACC/SuiKernel-GKI-Bulder/settings/actions/runners/new
+Note: I Use self-hosted runners. Configure it by yourself
 
 # Get & SYNC Source
 repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10
