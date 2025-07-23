@@ -25,6 +25,10 @@ git remote add upstream https://android.googlesource.com/kernel/common
 git fetch upstream refs/tags/android12-5.10.239_r00 (Example Tag | Find your tags here: https://android.googlesource.com/kernel/common/+refs)
 git merge FETCH_HEAD
 
+If you need to see the changelog:
+https://android-review.googlesource.com/q/project:kernel/common+branch:android12-5.10 (Android12-5.10)
+https://android-review.googlesource.com/q/project:kernel/common+branch:android12-5.10-lts (Android12-5.10-lts)
+
 ########################
 # Switch to LTO Thin (Unless your device is strong enough to build with full LTO)
 ########################
