@@ -5,7 +5,7 @@ Note: I Use self-hosted runners. Configure it by yourself
 repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10
 repo sync -c -j$(nproc --all)
 
-# Up to GitHub to SuiKernel-Main Branch (Note: Common is the Kernel Source, but leave the rest so you don't struggle when it comes to upstream)
+# Up to GitHub to SuiKernel-Main Branch
 cd common
 git checkout -b suikernel-experimental | suikernel-main (In case you haven't make a new branch)
 git remote set-url origin https://github.com/LoggingNewMemory/SuiKernel-android12-5.10
@@ -69,5 +69,14 @@ CONFIG_TCP_CONG_WESTWOOD=n
 CONFIG_TCP_CONG_HTCP=n
 CONFIG_DEFAULT_BBR=y
 CONFIG_DEFAULT_TCP_CONG="bbr"
+
+at the end of arch/arm64/configs/gki_defconfig
+
+########################
+# Using CAKE as default 
+########################
+CONFIG_NET_SCH_CAKE=y
+CONFIG_NET_SCH_FQ_CODEL=y
+CONFIG_NET_SCH_FQ=y
 
 at the end of arch/arm64/configs/gki_defconfig
