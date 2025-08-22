@@ -47,6 +47,7 @@ To
 test -d "$GKI_ROOT/KernelSU-Next" || git clone --depth 1 https://github.com/LoggingNewMemory/SuiKernel-KernelSU-Next KernelSU-Next && echo "[+] Repository cloned."
 
 Note: https://github.com/LoggingNewMemory/SuiKernel-KernelSU-Next is just example, use your own KernelSU Next repo
+
 ########################
 # Switch to LTO Thin (Unless your device is strong enough to build with full LTO)
 ########################
@@ -56,7 +57,7 @@ CONFIG_LTO_CLANG_FULL=y replace CONFIG_LTO_CLANG_THIN=y
 ########################
 # Fixes Touchscreen
 ########################
-curl -s https://github.com/linastorvaldz/kernel_new/commit/9e3775ee1fa72ddc32a1ebd8633e4a4dbfdabc96.patch | git am
+curl -s https://github.com/LoggingNewMemory/SuiKernel-Release/blob/main/Patches/FixTouch.patch | git am
 
 ########################
 # Adding Schedhorizon
