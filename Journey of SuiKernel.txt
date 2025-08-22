@@ -63,7 +63,7 @@ curl -s https://github.com/LoggingNewMemory/SuiKernel-Release/blob/main/Patches/
 # Adding Schedhorizon
 ########################
 Follow This
-https://github.com/bintang774/gki-android12-5.10/commit/01819fe12f14ef34e3d75f4d0edfcd723f8313da#diff-0cde65256909335643b2a29a3813834c19d22b2c83436f6891a14a50d3532748
+https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/cc08dc3bfd1f2eadc6edc7603ed6d01c365c3d15...d1a5000f1f6eb13044716b7bc759ca3aeae2f8bc
 Then add "CONFIG_CPU_FREQ_GOV_SCHEDHORIZON=y" at the end of arch/arm64/configs/gki_defconfig
 
 ########################
