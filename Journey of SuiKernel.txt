@@ -10,9 +10,9 @@ Note:
 - Another one: Preempt is not supported in 5.10
 
 # Use menuconfig
-# Note: You may need to install the toolchain (Google it)
+# Note: You need to install the aarch64-linux-gnu- toolchain (Google it)
 export ARCH=arm64
-export CROSS_COMPILE=aarch64-linux-gnu- # Or your specific toolchain prefix
+export CROSS_COMPILE=aarch64-linux-gnu-
 export LLVM=1
 export LLVM_IAS=1
 
