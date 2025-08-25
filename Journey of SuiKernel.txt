@@ -98,32 +98,6 @@ CONFIG_DEFAULT_TCP_CONG="bbr"
 at the end of arch/arm64/configs/gki_defconfig
 
 ########################
-# Using CAKE as default (?) Idk this works or nah?
-########################
-
-at /net/sched/Kconfig
-
-add
-config DEFAULT_CAKE
-		bool "Common Applications Kept Enhanced" if NET_SCH_CAKE
-
-under 
-config DEFAULT_PFIFO_FAST
-		bool "Priority FIFO Fast"
-
-add
-	default "cake" if DEFAULT_CAKE
-
-under default "pfifo_fast"
-
-change default "pfifo_fast" to default "cake"
-
-CONFIG_NET_SCH_DEFAULT=y
-CONFIG_NET_SCH_CAKE=y
-
-at the end of arch/arm64/configs/gki_defconfig
-
-########################
 # PREEMPT RT
 ########################
 CONFIG_PREEMPT_RT=y
@@ -131,13 +105,12 @@ CONFIG_PREEMPT_RT=y
 at the end of arch/arm64/configs/gki_defconfig
 
 ########################
-# Use BFQ and set Kyber and Mq-Deadline as Module (Disabling both Mq and Kyber is not reccomended)
+# Use BFQ 
 ########################
-# BFQ
-CONFIG_MQ_IOSCHED_BFQ=y
+CONFIG_IOSCHED_BFQ=y
+CONFIG_BFQ_GROUP_IOSCHED=y
+CONFIG_MQ_IOSCHED_DEADLINE=n
+CONFIG_MQ_IOSCHED_DEADLINE_CGROUP=n
+CONFIG_MQ_IOSCHED_KYBER=n
 
-# Set BFQ as the default
-CONFIG_DEFAULT_IOSCHED_BFQ=y
-CONFIG_DEFAULT_IOSCHED="bfq"
-CONFIG_MQ_IOSCHED_KYBER=m
-CONFIG_MQ_IOSCHED_DEADLINE=m
+at the end of arch/arm64/configs/gki_defconfig
