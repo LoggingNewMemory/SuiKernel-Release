@@ -118,7 +118,7 @@ under default "pfifo_fast"
 
 change default "pfifo_fast" to default "cake"
 
-NET_SCH_DEFAULT=y
+CONFIG_NET_SCH_DEFAULT=y
 CONFIG_NET_SCH_CAKE=y
 
 at the end of arch/arm64/configs/gki_defconfig
