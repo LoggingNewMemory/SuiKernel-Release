@@ -9,6 +9,22 @@ Note:
 - Note: Sometimes you need to modify how the Kconfig works
 - Another one: Preempt is not supported in 5.10
 
+# Use menuconfig
+# Note: You may need to install the toolchain (Google it)
+export ARCH=arm64
+export CROSS_COMPILE=aarch64-linux-gnu- # Or your specific toolchain prefix
+export LLVM=1
+export LLVM_IAS=1
+
+make gki_defconfig
+make menuconfig
+make savedefconfig
+cp defconfig arch/arm64/configs/gki_defconfig
+
+easy 1 line:
+export ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- LLVM=1 LLVM_IAS=1 && make gki_defconfig && make menuconfig
+make savedefconfig && cp defconfig arch/arm64/configs/gki_defconfig
+
 # Get & SYNC Source
 repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10
 repo sync -c -j$(nproc --all)
