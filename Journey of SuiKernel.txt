@@ -100,22 +100,33 @@ at the end of arch/arm64/configs/gki_defconfig
 ########################
 # Using CAKE as default (?) Idk this works or nah?
 ########################
-# Cake
-CONFIG_NET_SCH_CAKE=y
-CONFIG_NET_SCH_FQ_CODEL=y
-CONFIG_NET_SCH_FQ=y
 
-# Set CAKE as the default
-CONFIG_DEFAULT_QDISC_CAKE=y
-CONFIG_DEFAULT_QDISC="cake"
+at /net/sched/Kconfig
+
+add
+config DEFAULT_CAKE
+		bool "Common Applications Kept Enhanced" if NET_SCH_CAKE
+
+under 
+config DEFAULT_PFIFO_FAST
+		bool "Priority FIFO Fast"
+
+add
+	default "cake" if DEFAULT_CAKE
+
+under default "pfifo_fast"
+
+change default "pfifo_fast" to default "cake"
+
+NET_SCH_DEFAULT=y
+CONFIG_NET_SCH_CAKE=y
 
 at the end of arch/arm64/configs/gki_defconfig
 
 ########################
-# DYNAMIC PREEMPT
+# PREEMPT RT
 ########################
-CONFIG_PREEMPT_DYNAMIC=y
-CONFIG_PREEMPT_DYNAMIC_SELECTED=y
+CONFIG_PREEMPT_RT=y
 
 at the end of arch/arm64/configs/gki_defconfig
 
