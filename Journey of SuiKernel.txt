@@ -98,13 +98,6 @@ CONFIG_DEFAULT_TCP_CONG="bbr"
 at the end of arch/arm64/configs/gki_defconfig
 
 ########################
-# PREEMPT RT
-########################
-CONFIG_PREEMPT_RT=y
-
-at the end of arch/arm64/configs/gki_defconfig
-
-########################
 # Use BFQ 
 ########################
 CONFIG_IOSCHED_BFQ=y
