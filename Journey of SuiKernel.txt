@@ -1,10 +1,14 @@
 If you managed to find and read this. I consider you as a kernel developer
-Note: I Use self-hosted runners. Configure it by yourself
+Note: 
+- I Use self-hosted runners. Configure it by yourself
+- I recommend you to use the mainline / lts from Google, if you decided to use pure Linux kernel. Leave
+- And to upstream, I recommend you to upstream from your original branch (mainline / lts)
+- Don't ask AIs for the modification, some of them are incorrect and leading you to try and see
+- Instead read the Kconfig file (You may ask AIs to find the Kconfig related to your modification)
+- And add the CONFIG_ in the begining of your config modification
+- Note: Sometimes you need to modify how the Kconfig works
 
 # Get & SYNC Source
-# Note from Yamada
-# I recommend you to use the mainline / lts from Google, if you decided to use pure Linux kernel. Leave
-# And to upstream, I recommend you to upstream from your original branch (mainline / lts)
 repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10
 repo sync -c -j$(nproc --all)
 
