@@ -75,7 +75,7 @@ https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/cc08dc3bfd1
 Then add "CONFIG_CPU_FREQ_GOV_SCHEDHORIZON=y" at the end of arch/arm64/configs/gki_defconfig
 
 ########################
-# Using BBR (Default & Remove Cubic)
+# Using BBR (Default & Remove Cubic) - Okay, probably overkill but works (Revise needed)
 ########################
 inside /net/ipv4/Kconfig
 
@@ -108,3 +108,34 @@ CONFIG_MQ_IOSCHED_KYBER=n
 CONFIG_DEFAULT_IOSCHED="bfq" 
 
 at the end of arch/arm64/configs/gki_defconfig
+
+########################
+# Use CAKE (Common Applications Kept Enhanced)
+########################
+inside net/sched/Kconfig
+
+modify 
+default DEFAULT_PFIFO_FAST to default DEFAULT_CAKE
+
+add 
+config DEFAULT_CAKE
+		bool "Common Applications Kept Enhanced" if NET_SCH_CAKE
+
+under 
+config DEFAULT_SFQ
+		bool "Stochastic Fair Queue" if NET_SCH_SFQ
+
+add default "pfifo_fast" under default "sfq" if DEFAULT_SFQ
+
+modify default "pfifo_fast" to default "cake"
+
+add
+
+CONFIG_NET_SCH_DEFAULT=y
+CONFIG_NET_SCH_CAKE=y
+CONFIG_DEFAULT_NET_SCH="cake"
+
+at the end of arch/arm64/configs/gki_defconfig
+
+see: https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/09a76308ce1abbf76c02590f22c080c9a1b08440...53bc6e3bde880ada85b3ece0b1699217805ca937
+
