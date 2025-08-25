@@ -2,6 +2,9 @@ If you managed to find and read this. I consider you as a kernel developer
 Note: I Use self-hosted runners. Configure it by yourself
 
 # Get & SYNC Source
+# Note from Yamada
+# I recommend you to use the mainline / lts from Google, if you decided to use pure Linux kernel. Leave
+# And to upstream, I recommend you to upstream from your original branch (mainline / lts)
 repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10
 repo sync -c -j$(nproc --all)
 
@@ -93,8 +96,33 @@ at the end of arch/arm64/configs/gki_defconfig
 ########################
 # Using CAKE as default (?) Idk this works or nah?
 ########################
+# Cake
 CONFIG_NET_SCH_CAKE=y
 CONFIG_NET_SCH_FQ_CODEL=y
 CONFIG_NET_SCH_FQ=y
 
+# Set CAKE as the default
+CONFIG_DEFAULT_QDISC_CAKE=y
+CONFIG_DEFAULT_QDISC="cake"
+
 at the end of arch/arm64/configs/gki_defconfig
+
+########################
+# DYNAMIC PREEMPT
+########################
+CONFIG_PREEMPT_DYNAMIC=y
+CONFIG_PREEMPT_DYNAMIC_SELECTED=y
+
+at the end of arch/arm64/configs/gki_defconfig
+
+########################
+# Use BFQ and set Kyber and Mq-Deadline as Module (Disabling both Mq and Kyber is not reccomended)
+########################
+# BFQ
+CONFIG_MQ_IOSCHED_BFQ=y
+
+# Set BFQ as the default
+CONFIG_DEFAULT_IOSCHED_BFQ=y
+CONFIG_DEFAULT_IOSCHED="bfq"
+CONFIG_MQ_IOSCHED_KYBER=m
+CONFIG_MQ_IOSCHED_DEADLINE=m
