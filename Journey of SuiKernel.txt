@@ -157,10 +157,11 @@ https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/a3cd74e6aae
 
 then add
 
+CONFIG_IOSCHED_BFQ=y
+CONFIG_BFQ_GROUP_IOSCHED=y
 CONFIG_MQ_IOSCHED_DEADLINE=n
 CONFIG_MQ_IOSCHED_DEADLINE_CGROUP=n
 CONFIG_MQ_IOSCHED_KYBER=n
-CONFIG_IOSCHED_BFQ=y
-CONFIG_BFQ_GROUP_IOSCHED=y
+CONFIG_DEFAULT_IOSCHED="bfq"
 
 at the end of arch/arm64/configs/gki_defconfig
