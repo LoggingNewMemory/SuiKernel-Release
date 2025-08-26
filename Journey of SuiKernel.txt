@@ -58,7 +58,7 @@ Change the
         git checkout next && echo "[-] Switched to next branch."
 
 To
-        git checkout next-susfs && echo "[-] Switched to next branch."
+        git checkout next-susfs && echo "[-] Switched to next-susfs branch."
 
 ########################
 # Setup SUSFS
