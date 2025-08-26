@@ -52,7 +52,7 @@ Change the
 test -d "$GKI_ROOT/KernelSU-Next" || git clone https://github.com/KernelSU-Next/KernelSU-Next && echo "[+] Repository cloned."
 
 To
-test -d "$GKI_ROOT/KernelSU-Next" || git clone --depth 1 https://github.com/LoggingNewMemory/SuiKernel-KernelSU-Next KernelSU-Next && echo "[+] Repository cloned."
+test -d "$GKI_ROOT/KernelSU-Next" || git clone --depth 1 https://github.com/pershoot/KernelSU-Next KernelSU-Next && echo "[+] Repository cloned."
 
 Change the
         git checkout next && echo "[-] Switched to next branch."
