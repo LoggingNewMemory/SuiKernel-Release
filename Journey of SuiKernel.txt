@@ -169,6 +169,9 @@ see: https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/09a763
 You need to do some tweak in order to make your init not override the changes
 https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/b8d9190fd6d79e39aefd592c47da03a047248aa0...72bceca6e20ecb0018de3a43dc09f6d14fd49ed0
 
+And need to modify the Kconfig
+https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/a3cd74e6aae84d1adf2c62cb5e4841c7694279e1...e033a8f1a278664f19156680f488e3e7d2a8e999
+
 then add
 
 CONFIG_MQ_IOSCHED_DEADLINE=n
