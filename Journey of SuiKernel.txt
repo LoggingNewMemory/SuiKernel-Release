@@ -15,24 +15,24 @@ repo sync -c -j$(nproc --all)
 
 # Up to GitHub to SuiKernel-Main Branch
 cd common
-git checkout -b suikernel-experimental | suikernel-main (In case you haven't make a new branch)
+git checkout -b suikernel-upstream | suikernel-main (In case you haven't make a new branch)
 git remote set-url origin https://github.com/LoggingNewMemory/SuiKernel-android12-5.10
 git remote -v (To Verify The Remote)
 git branch -m suikernel-experimental | suikernel-main
 
-git pull origin suikernel-experimental | suikernel-main (Just in case if you need to continue)
+git pull origin suikernel-upstream | suikernel-main (Just in case if you need to continue)
 
 # Making Changes
-git checkout suikernel-experimental | suikernel-main
+git checkout suikernel-upstream | suikernel-main
 git add .
 git commit -m "Your Message"
-git push -u origin suikernel-experimental
+git push -u origin suikernel-main
 
 # To upstream
 git remote add upstream https://android.googlesource.com/kernel/common
 git fetch upstream refs/tags/android12-5.10.239_r00 (Example Tag | Find your tags here: https://android.googlesource.com/kernel/common/+refs)
 git merge FETCH_HEAD
-git push -u origin suikernel-experimental
+git push -u origin suikernel-upstream
 
 If you need to see the changelog:
 https://android-review.googlesource.com/q/project:kernel/common+branch:android12-5.10 (Android12-5.10)
