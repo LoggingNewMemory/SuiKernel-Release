@@ -38,10 +38,33 @@ If you need to see the changelog:
 https://android-review.googlesource.com/q/project:kernel/common+branch:android12-5.10 (Android12-5.10)
 https://android-review.googlesource.com/q/project:kernel/common+branch:android12-5.10-lts (Android12-5.10-lts)
 
+# If you too lazy to manually change, you can do cherry pick my commit
+git remote add yamada https://github.com/LoggingNewMemory/SuiKernel-android12-5.10
+git fetch yamada
+git cherry pick <my commit hash>
+
+########################
+# Use pershoot KSUN
+########################
+Modify setup.sh inside your kernel folder (/kernel/setup.sh)
+
+Change the
+test -d "$GKI_ROOT/KernelSU-Next" || git clone https://github.com/KernelSU-Next/KernelSU-Next && echo "[+] Repository cloned."
+
+To
+test -d "$GKI_ROOT/KernelSU-Next" || git clone --depth 1 https://github.com/LoggingNewMemory/SuiKernel-KernelSU-Next KernelSU-Next && echo "[+] Repository cloned."
+
+Change the
+        git checkout next && echo "[-] Switched to next branch."
+
+To
+        git checkout next-susfs && echo "[-] Switched to next branch."
+
 ########################
 # Setup SUSFS
 ########################
 Fork KernelSU Next repo (Change it to your own name (Ex: SuiKernel-KernelSU-Next)
+This tutorial assumes you use next branch (no changes)
 Git clone your forked KernelSU Next repo (git clone [repo link])
 Delete everything execpt kernel folder
 Get my susfs.sh https://github.com/LoggingNewMemory/SuiKernel-KernelSU-Next/blob/next/susfs.sh
@@ -139,3 +162,19 @@ at the end of arch/arm64/configs/gki_defconfig
 
 see: https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/09a76308ce1abbf76c02590f22c080c9a1b08440...53bc6e3bde880ada85b3ece0b1699217805ca937
 
+###########################
+# Use BFQ
+###########################
+
+You need to do some tweak in order to make your init not override the changes
+https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/b8d9190fd6d79e39aefd592c47da03a047248aa0...72bceca6e20ecb0018de3a43dc09f6d14fd49ed0
+
+then add
+
+CONFIG_MQ_IOSCHED_DEADLINE=n
+CONFIG_MQ_IOSCHED_DEADLINE_CGROUP=n
+CONFIG_MQ_IOSCHED_KYBER=n
+CONFIG_IOSCHED_BFQ=y
+CONFIG_BFQ_GROUP_IOSCHED=y
+
+at the end of arch/arm64/configs/gki_defconfig
