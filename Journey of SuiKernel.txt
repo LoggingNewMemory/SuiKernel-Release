@@ -163,15 +163,8 @@ CONFIG_HZ_300=y
 at the end of arch/arm64/configs/gki_defconfig
 
 ###########################
-# Sched Autogroup
+# Sched MC
 ###########################
-CONFIG_SCHED_AUTOGROUP=y
-
-at the end of arch/arm64/configs/gki_defconfig
-
-###########################
-# KSM
-###########################
-CONFIG_KSM=y
+CONFIG_SCHED_MC=y
 
 at the end of arch/arm64/configs/gki_defconfig
