@@ -47,6 +47,9 @@ grep -r "config SCHED_MC" .
 inside your kernel source
 
 Note: SCHED_MC replace it with your config flag
+
+# If you want to add something to your install script
+modify anykernel.sh (See https://github.com/LoggingNewMemory/SuiKernel-anykernel)
 ########################
 # Setup SUSFS
 ########################
