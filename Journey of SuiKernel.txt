@@ -7,7 +7,6 @@ Note:
 - Instead read the Kconfig file (You may ask AIs to find the Kconfig related to your modification)
 - And add the CONFIG_ in the begining of your config modification
 - Note: Sometimes you need to modify how the Kconfig works
-- Another one: Preempt is not supported in 5.10
 
 # Get & SYNC Source
 repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10
