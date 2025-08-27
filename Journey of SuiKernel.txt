@@ -42,6 +42,11 @@ git remote add yamada https://github.com/LoggingNewMemory/SuiKernel-android12-5.
 git fetch yamada
 git cherry pick <my commit hash>
 
+# If you want to find a kernel config flag 
+grep -r "config SCHED_MC" .
+inside your kernel source
+
+Note: SCHED_MC replace it with your config flag
 ########################
 # Setup SUSFS
 ########################
