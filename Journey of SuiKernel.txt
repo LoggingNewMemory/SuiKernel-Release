@@ -146,23 +146,11 @@ at the end of arch/arm64/configs/gki_defconfig
 see: https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/09a76308ce1abbf76c02590f22c080c9a1b08440...53bc6e3bde880ada85b3ece0b1699217805ca937
 
 ###########################
-# Use BFQ
+# Use None as I/O scheduler
+Why? I focused on Minimal CPU Overhead
 ###########################
-
-You need to do some tweak in order to make your init not override the changes
-https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/b8d9190fd6d79e39aefd592c47da03a047248aa0...72bceca6e20ecb0018de3a43dc09f6d14fd49ed0
-
-And need to modify the Kconfig
-https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/a3cd74e6aae84d1adf2c62cb5e4841c7694279e1...e033a8f1a278664f19156680f488e3e7d2a8e999
-
-then add
-
-CONFIG_IOSCHED_BFQ=y
-CONFIG_BFQ_GROUP_IOSCHED=y
 CONFIG_MQ_IOSCHED_DEADLINE=n
 CONFIG_MQ_IOSCHED_DEADLINE_CGROUP=n
 CONFIG_MQ_IOSCHED_KYBER=n
-CONFIG_DEFAULT_IOSCHED="bfq"
-CONFIG_DEFAULT_BFQ=y
 
 at the end of arch/arm64/configs/gki_defconfig
