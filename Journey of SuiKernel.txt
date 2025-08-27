@@ -154,3 +154,20 @@ CONFIG_MQ_IOSCHED_DEADLINE_CGROUP=n
 CONFIG_MQ_IOSCHED_KYBER=n
 
 at the end of arch/arm64/configs/gki_defconfig
+
+###########################
+# 300 Hz 
+(Actually I want to set 1000Hz, But it gonna consume a lot of power)
+###########################
+CONFIG_HZ_300=y
+
+at the end of arch/arm64/configs/gki_defconfig
+
+###########################
+# Disable FSYNC 
+[WARNING] This is actually not advised
+###########################
+See
+https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/c21f8ca760480bef8930e66d4986ac6d8d982c7e...2bc203e861c32a719709c70c2663419669b65b48
+
+At the fs/sync.c section
