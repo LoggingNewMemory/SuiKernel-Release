@@ -169,5 +169,6 @@ at the end of arch/arm64/configs/gki_defconfig
 ###########################
 See
 https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/c21f8ca760480bef8930e66d4986ac6d8d982c7e...2bc203e861c32a719709c70c2663419669b65b48
+https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/2bc203e861c32a719709c70c2663419669b65b48...cb022d4df1cbfd0e1764485290e7e6898d5aa9e4
 
 At the fs/sync.c section
