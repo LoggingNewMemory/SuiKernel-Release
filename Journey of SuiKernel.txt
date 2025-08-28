@@ -76,7 +76,14 @@ Note: https://github.com/LoggingNewMemory/SuiKernel-KernelSU-Next is just exampl
 CONFIG_LTO_CLANG_FULL=y replace CONFIG_LTO_CLANG_THIN=y
 
 ########################
-# Fixes Touchscreen
+# Patches of Xiaomi Garnet (Thanks: Goten)
+########################
+cherry pick this
+
+https://github.com/LoggingNewMemory/SuiKernel-android12-5.10/compare/6acfb8ce2e8bb7d52d4c92b22b2a82fbe35d2659...97be0f361d658377705e90a635564ab733969dd7
+
+########################
+# Fixes Touchscreen (Thanks: Bintang)
 ########################
 curl -s https://github.com/LoggingNewMemory/SuiKernel-Release/blob/main/Patches/FixTouch.patch | git am
 
