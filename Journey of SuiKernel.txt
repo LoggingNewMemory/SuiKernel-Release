@@ -22,8 +22,8 @@ git branch -m suikernel-experimental | suikernel-main
 git pull origin suikernel-upstream | suikernel-main (Just in case if you need to continue)
 
 # Making Changes
-git checkout suikernel-upstream | suikernel-main
 git add .
+git checkout suikernel-upstream | suikernel-main
 git commit -m "Your Message"
 git push -u origin suikernel-main
 
