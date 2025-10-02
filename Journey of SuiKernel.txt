@@ -146,7 +146,7 @@ under
 config DEFAULT_SFQ
 		bool "Stochastic Fair Queue" if NET_SCH_SFQ
 
-add default "pfifo_fast" under default "sfq" if DEFAULT_SFQ
+add default "cake" if DEFAULT_CAKE under default "sfq" if DEFAULT_SFQ
 
 modify default "pfifo_fast" to default "cake"
 
