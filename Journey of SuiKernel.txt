@@ -28,10 +28,11 @@ git commit -m "Your Message"
 git push -u origin suikernel-main
 
 # To upstream
-git remote add upstream https://android.googlesource.com/kernel/common
+git remote add upstream https://android.googlesource.com/kernel/common (Case if you haven't add upstream URL)
+git checkout suikernel-upstream
 git fetch upstream refs/tags/android12-5.10.239_r00 (Example Tag | Find your tags here: https://android.googlesource.com/kernel/common/+refs) - Tags may look like this android12-5.10.243_r00
 git merge FETCH_HEAD
-git push -u origin suikernel-upstream
+git push 
 
 If you need to see the changelog:
 https://android-review.googlesource.com/q/project:kernel/common+branch:android12-5.10 (Android12-5.10)
