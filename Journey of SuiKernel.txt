@@ -176,6 +176,9 @@ at the end of arch/arm64/configs/gki_defconfig
 ###########################
 CONFIG_HZ_300=y
 
+or if 1000 Hz
+CONFIG_HZ_1000=y
+
 at the end of arch/arm64/configs/gki_defconfig
 
 ###########################
