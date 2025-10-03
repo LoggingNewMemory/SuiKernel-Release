@@ -191,3 +191,27 @@ at the end of arch/arm64/configs/gki_defconfig
 CONFIG_SCHED_MC=y
 
 at the end of arch/arm64/configs/gki_defconfig
+
+###########################
+# PREEMPT
+###########################
+CONFIG_PREEMPT_VOLUNTARY=n
+CONFIG_PREEMPT_NONE=n
+
+at the end of arch/arm64/configs/gki_defconfig
+
+###########################
+# ZRAM & ZSWAP
+###########################
+CONFIG_ZRAM=y
+CONFIG_ZRAM_LZ4_COMPRESS=y
+CONFIG_ZRAM_LZ4HC_COMPRESS=y
+CONFIG_ZRAM_ZSTD_COMPRESS=y
+CONFIG_ZRAM_WRITEBACK=y
+CONFIG_ZSWAP=y
+CONFIG_ZSWAP_COMPRESSOR_LZO=y
+CONFIG_ZSWAP_COMPRESSOR_LZ4=y
+CONFIG_ZSWAP_COMPRESSOR_ZSTD=y
+CONFIG_ZSWAP_COMPRESSOR_DEFAULT_LZ4=y
+
+at the end of arch/arm64/configs/gki_defconfig
