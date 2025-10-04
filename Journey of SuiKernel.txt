@@ -55,6 +55,8 @@ modify anykernel.sh (See https://github.com/LoggingNewMemory/SuiKernel-anykernel
 # SUKISU Patch
 https://github.com/SukiSU-Ultra/SukiSU_patch/
 
+# KernelSU Patch
+https://github.com/KernelSU-Next/kernel_patches/
 ########################
 # Setup SUSFS
 ########################
