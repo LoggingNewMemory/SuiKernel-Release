@@ -64,7 +64,7 @@ Fork KernelSU Next repo (Change it to your own name (Ex: SuiKernel-KernelSU-Next
 This tutorial assumes you use next branch (no changes)
 Git clone your forked KernelSU Next repo (git clone [repo link])
 Delete everything execpt kernel folder
-Get my susfs.sh https://github.com/LoggingNewMemory/SuiKernel-KernelSU-Next/blob/next/susfs.sh
+Get my susfs.sh https://github.com/LoggingNewMemory/SuiKernel-Release/blob/main/Patches/susfs.sh
 Run the susfs.sh inside your your forked repo 
 Modify setup.sh inside your kernel folder (/kernel/setup.sh)
 
