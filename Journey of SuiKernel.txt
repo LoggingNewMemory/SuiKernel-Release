@@ -174,6 +174,10 @@ CONFIG_MQ_IOSCHED_DEADLINE=n
 CONFIG_MQ_IOSCHED_DEADLINE_CGROUP=n
 CONFIG_MQ_IOSCHED_KYBER=n
 
+Modify from y to n
+CONFIG_IOSCHED_BFQ=n
+CONFIG_BFQ_GROUP_IOSCHED=n
+
 at the end of arch/arm64/configs/gki_defconfig
 
 ###########################
@@ -212,3 +216,15 @@ CONFIG_ZRAM_DEF_COMP_LZ4=y
 CONFIG_ZSWAP=n
 
 at the end of arch/arm64/configs/gki_defconfig
+
+###########################
+# Disable Kernel Audit
+###########################
+Change
+CONFIG_AUDIT=y
+
+to
+
+CONFIG_AUDIT=n
+
+at arch/arm64/configs/gki_defconfig
