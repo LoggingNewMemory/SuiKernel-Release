@@ -216,3 +216,9 @@ CONFIG_ZRAM_DEF_COMP_LZ4=y
 CONFIG_ZSWAP=n
 
 at the end of arch/arm64/configs/gki_defconfig
+
+##########################
+# WildKernels Patches
+##########################
+
+See: https://github.com/WildKernels/kernel_patches
