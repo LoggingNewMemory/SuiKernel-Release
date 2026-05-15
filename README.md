@@ -9,7 +9,7 @@ Features:
 - NTSYNC support
 - Anya Thermal | Spoof Thermal to 30 degree + Disable thermal zone
 - Multi Target Uname Spoof (Fix AlfaGift uname detection)
-- Sandevistan Boot (MaxFreq when device boots, restore to normal after 40 seconds)
+- Sandevistan Boot (MaxFreq when device boots, restore to normal after 60 seconds)
 - Yamada Gaming Boost (Simply a CPU Input Boost and Schedutil Rate Limit Tuning)
 - Tenebrion Battery (Minfreq when screen is off)
 - BBR as Default
