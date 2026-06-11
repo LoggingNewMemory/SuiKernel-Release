@@ -17,6 +17,9 @@ Stellar Stellar
 - 300 Hz timing
 - SCHED MC is enabled
 - ZRAM with LZ4 Algoritm
+- Sparxie Swap Tuner — Tune swapiness to 30
+- Ochinai Inaho Audio — Tune SCHED_FIFO + PM QoS + audioserver thread booster (Basically to minimze audio latency)
+- Enforce schedutil as GOV
 
 ## Support Me
 https://sociabuzz.com/kanagawa_yamada/tribe (Global) <br />
