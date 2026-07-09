@@ -20,6 +20,32 @@ Stellar Stellar
 - Sparxie Swap Tuner — Tune swapiness to 30
 - Ochinai Inaho Audio — Tune SCHED_FIFO + PM QoS + audioserver thread booster (Basically to minimze audio latency)
 - Enforce schedutil as GOV
+- Ayunda Risu Safeprop
+
+Spoofed:
+```
+ro.crypto.state=encrypted
+ro.boot.verifiedbootstate=green
+ro.boot.veritymode=enforcing
+vendor.boot.vbmeta.device_state=locked
+ro.crypto.state=encrypted
+ro.secureboot.lockstate=locked
+ro.boot.flash.locked=1
+ro.boot.vbmeta.device_state=locked
+ro.boot.selinux=enforcing
+sys.oem_unlock_allowed=0
+ro.boot.veritymode.managed=yes
+ro.boot.realmebootstate=green
+ro.boot.warranty_bit=0
+ro.vendor.boot.warranty_bit=0
+ro.vendor.warranty_bit=0
+ro.warranty_bit=0
+ro.boot.realme.lockstate=1
+vendor.boot.verifiedbootstate=green
+```
+Directly from kernel, potentially fix banking apps, etc
+- Airani Iofifteen CPUSet - allow for all CPU cores to be used in tasks
+- Moona Hoshinova ZRAM - enforce lz4, tweak swap/vma_ra_enabled and vm/page-cluster
 
 ## Support Me
 https://sociabuzz.com/kanagawa_yamada/tribe (Global) <br />
