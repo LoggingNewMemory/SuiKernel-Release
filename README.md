@@ -46,7 +46,10 @@ vendor.boot.verifiedbootstate=green
 Directly from kernel, potentially fix banking apps, etc
 - Airani Iofifteen CPUSet - allow for all CPU cores to be used in tasks
 - Moona Hoshinova ZRAM - enforce lz4, tweak swap/vma_ra_enabled and vm/page-cluster
-
+- Kobo Fast Charge kernel Level: disables generic path of battery limiters
+- Enable SUSFS hide feature by default
+- Kureiji Ollie Affinity: Modifies kswapd to highest CPU cores
+  
 ## Support Me
 https://sociabuzz.com/kanagawa_yamada/tribe (Global) <br />
 https://t.me/KLAGen2/86 (QRIS) <br />
