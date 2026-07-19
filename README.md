@@ -49,7 +49,16 @@ Directly from kernel, potentially fix banking apps, etc
 - Kobo Fast Charge kernel Level: disables generic path of battery limiters
 - Enable SUSFS hide feature by default
 - Kureiji Ollie Affinity: Modifies kswapd to highest CPU cores
-  
+
+## Blocklisted Device
+
+The following list are the devices that blocklisted from using SuiKernel. \
+Any attempt to try using SuiKernel on this following device will causes the device to **NOT BOOT** 
+
+| Device codename | Device name | Reason |
+|---|---|---|
+| X6882 | Infinix Infinix Hot 50 4G | Toxic community and @roki1234a (Roki) |
+
 ## Support Me
 https://sociabuzz.com/kanagawa_yamada/tribe (Global) <br />
 https://t.me/KLAGen2/86 (QRIS) <br />
