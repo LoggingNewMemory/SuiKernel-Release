@@ -7,7 +7,7 @@ Stellar Stellar
 
 ## Features
 - NTSYNC support
-- Anya Thermal | Spoof Thermal to 30 degree + Disable thermal zone
+- Anya Thermal | Spoof Thermal to 30ish degree + Disable thermal zone
 - Multi Target Uname Spoof (Fix AlfaGift uname detection)
 - Sandevistan Boot (MaxFreq when device boots, restore to normal after 60 seconds)
 - Yamada Gaming Boost (Simply a CPU Input Boost and Schedutil Rate Limit Tuning)
@@ -47,18 +47,22 @@ Directly from kernel, potentially fix banking apps, etc
 - Airani Iofifteen CPUSet - allow for all CPU cores to be used in tasks
 - Moona Hoshinova ZRAM - enforce lz4, tweak swap/vma_ra_enabled and vm/page-cluster
 - Kobo Fast Charge kernel Level: disables generic path of battery limiters
-- Enable SUSFS hide feature by default
 - Kureiji Ollie Affinity: Modifies kswapd to highest CPU cores
-
-## Blocklisted Device
-
-The following list are the devices that blocklisted from using SuiKernel. \
-Any attempt to try using SuiKernel on this following device will causes the device to **NOT BOOT** 
-
-| Device codename | Device name | Reason |
-|---|---|---|
-| X6882 | Infinix Infinix Hot 50 4G | Toxic community and @roki1234a (Roki) |
-
+- Allow adb shell to have SU by default
+- BBR3 as default
+- Drop BBR1 completely
+- Optimizes generic memory operations (like memset) to write in large 4 or 8-byte chunks instead of byte-by-byte
+- Tweaks the Flash-Friendly File System (F2FS) to reduce storage write congestion and batch I/O operations
+- Forces the TCP_NODELAY flag
+- Implements explicit hardware memory prefetching optimizations.
+- Reduces the time it takes the CPU to wake from sleep states and lowers memory cache reclaim pressure.
+- Allow this app to grant root without user needs to allow root on KowSU app
+```
+in.hridayan.ashell
+bin.mt.plus.canary
+org.swiftapps.swiftbackup
+com.kanagawa.yamada.darjeeling
+```
 ## Support Me
 https://sociabuzz.com/kanagawa_yamada/tribe (Global) <br />
 https://t.me/KLAGen2/86 (QRIS) <br />
