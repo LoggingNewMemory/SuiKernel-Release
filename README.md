@@ -46,7 +46,6 @@ vendor.boot.verifiedbootstate=green
 Directly from kernel, potentially fix banking apps, etc
 - Airani Iofifteen CPUSet - allow for all CPU cores to be used in tasks
 - Moona Hoshinova ZRAM - enforce lz4, tweak swap/vma_ra_enabled and vm/page-cluster
-- Kobo Fast Charge kernel Level: disables generic path of battery limiters
 - Kureiji Ollie Affinity: Modifies kswapd to highest CPU cores
 - Allow adb shell to have SU by default
 - BBR3 as default
@@ -56,13 +55,7 @@ Directly from kernel, potentially fix banking apps, etc
 - Forces the TCP_NODELAY flag
 - Implements explicit hardware memory prefetching optimizations.
 - Reduces the time it takes the CPU to wake from sleep states and lowers memory cache reclaim pressure.
-- Allow this app to grant root without user needs to allow root on KowSU app
-```
-in.hridayan.ashell
-bin.mt.plus.canary
-org.swiftapps.swiftbackup
-com.kanagawa.yamada.darjeeling
-```
+
 ## Support Me
 https://sociabuzz.com/kanagawa_yamada/tribe (Global) <br />
 https://t.me/KLAGen2/86 (QRIS) <br />
