@@ -5,6 +5,12 @@
 だって僕は星だから~ <br />
 Stellar Stellar
 
+## Source of Kindly Everything
+- SuiKernel Kernel Source: [HERE](https://github.com/LoggingNewMemory/SuiKernel-android12-5.10)
+- SuiKernel Builder: [HERE](https://github.com/LoggingNewMemory/SuiKernel-GKI-Bulder)
+- SuiKernel AnyKernel: [HERE](https://github.com/LoggingNewMemory/SuiKernel-anykernel)
+- SuiKernel Manager: [HERE](https://github.com/LoggingNewMemory/SuiKernel-Manager)
+
 ## Features
 - NTSYNC support
 - Anya Thermal | Spoof Thermal to 30ish degree + Disable thermal zone
